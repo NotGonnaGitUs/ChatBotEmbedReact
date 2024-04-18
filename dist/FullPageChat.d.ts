@@ -1,13 +1,14 @@
 /// <reference types="react" />
-import type { BotProps } from 'flowise-embed';
-type Props = BotProps & {
+import type { BotProps } from "flowise-embed";
+import type { BubbleProps } from "flowise-embed";
+type Props = BotProps & BubbleProps & {
     style?: React.CSSProperties;
     className?: string;
 };
 declare global {
     namespace JSX {
         interface IntrinsicElements {
-            'flowise-fullchatbot': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
+            "flowise-fullchatbot": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
                 class?: string;
             };
         }
